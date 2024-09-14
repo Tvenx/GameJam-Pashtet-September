@@ -59,12 +59,20 @@ public class CharacterMove : MonoBehaviour, IControlable
 
         if (!_isDashing && _direction != Vector3.zero)
         {
-        //    _animator.CrossFade("move", 0.01f);
+              _animator.CrossFade("Move", 0.01f);
+           // _animator.SetTrigger("Move");
             _controller.Move(_direction * _speed * Time.deltaTime);
             transform.localRotation = Quaternion.Euler(0f, 90f * Mathf.Abs(_direction.z) - 90 * _direction.z + 90f * _direction.x, 0f);
         }
-      //  if (_direction == Vector3.zero && !_isDashing) 
-           // _animator.CrossFade("idle", 0.02f);
+        else
+        {
+            _animator.SetTrigger("Idle");
+        }
+/*        if (_direction == Vector3.zero && !_isDashing)
+        {
+            // _animator.CrossFade("Idle", 0.02f);
+            _animator.SetTrigger("Idle");
+        }*/
     }
 
     private void GravityFall()
