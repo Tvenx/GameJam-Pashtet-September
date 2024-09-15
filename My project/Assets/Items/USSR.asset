@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f8c316ba0805cf46a861a0360e9587e, type: 3}
   m_Name: USSR
   m_EditorClassIdentifier: 
-  _sprite: {fileID: 0}
+  _itemPrefab: {fileID: 919132149155446097, guid: 4dbaeacc75153e14f91a0ed92eb0217a, type: 3}
   _index: 1
   _name: "\u0428\u043B\u0435\u043C \u043F\u0435\u0440\u0432\u043E\u0433\u043E \u043A\u043E\u0441\u043C\u043E\u043D\u0430\u0432\u0442\u0430"
