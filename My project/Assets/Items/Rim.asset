@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Rim
   m_EditorClassIdentifier: 
   _itemPrefab: {fileID: 919132149155446097, guid: fd82a39395a7d984db1b7855dadf799c, type: 3}
-  _index: 3
+  _index: 0
   _name: "\u0421\u043A\u0443\u0442\u0443\u043C - \u0449\u0438\u0442 \u0440\u0438\u043C\u0441\u043A\u043E\u0439
     \u0438\u043C\u043F\u0435\u0440\u0438\u0438"

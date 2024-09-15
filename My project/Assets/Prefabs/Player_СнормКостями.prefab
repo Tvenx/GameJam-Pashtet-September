@@ -948,9 +948,10 @@ GameObject:
   - component: {fileID: 672401389611745571}
   - component: {fileID: 6270255406927419638}
   - component: {fileID: 7770628228100396531}
+  - component: {fileID: 4588172536084247633}
   m_Layer: 0
   m_Name: "\u041A\u043E\u043B\u043B\u0430\u0439\u0434\u0435\u0440\u044B_\u0418\u0433\u0440\u043E\u043A\u0430"
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1084,6 +1085,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items: []
+--- !u!114 &4588172536084247633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3314919783959856054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3635c0efe2860184aa8118ab470cbb06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items: []
+  savedItems:
+  - {fileID: 11400000, guid: 9ae57fa1486053a4ab2343feacf86db3, type: 2}
+  - {fileID: 11400000, guid: 1c463714f3c3e3e4183e9561d7f2fb64, type: 2}
+  - {fileID: 11400000, guid: 1bf7f044bea59fb4da63bbfcdbaa6325, type: 2}
+  - {fileID: 11400000, guid: db109f40461f33940b15ffe198839966, type: 2}
 --- !u!1 &3703219360115825430
 GameObject:
   m_ObjectHideFlags: 0

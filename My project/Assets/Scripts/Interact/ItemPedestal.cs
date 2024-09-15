@@ -39,7 +39,7 @@ public class ItemPedestal : MonoBehaviour
             else
             {
                 // Возврат текущего предмета в инвентарь
-                ReturnItemToInventory();
+               // ReturnItemToInventory();
             }
         }
     }
