@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f8c316ba0805cf46a861a0360e9587e, type: 3}
   m_Name: Samurai
   m_EditorClassIdentifier: 
-  _sprite: {fileID: 0}
+  _itemPrefab: {fileID: 919132149155446097, guid: 908d19ca3070e9c4885ab8190ecfc5dd, type: 3}
   _index: 2
   _name: "\u0428\u043B\u0435\u043C \u0441\u0430\u043C\u0443\u0440\u0430\u044F"

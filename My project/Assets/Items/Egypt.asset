@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f8c316ba0805cf46a861a0360e9587e, type: 3}
   m_Name: Egypt
   m_EditorClassIdentifier: 
-  _sprite: {fileID: 0}
+  _itemPrefab: {fileID: 919132149155446097, guid: e87334aa44532e7459eadb490b914e02, type: 3}
   _index: 3
   _name: "\u0411\u043E\u0433 \u0420\u0430"
