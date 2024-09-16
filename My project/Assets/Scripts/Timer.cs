@@ -8,8 +8,6 @@ public class Timer : MonoBehaviour
     [SerializeField] private float _maxTime;
     [SerializeField] private string _nextScene;
 
-    //[SerializeField] private AudioSource _signal;
-
     private float _time;
     [SerializeField]
     private float _Time
@@ -25,10 +23,9 @@ public class Timer : MonoBehaviour
 
     private void Update()
     {
-        _timer.text = _time.ToString();
+        // Отображаем время без запятой
+        _timer.text = Mathf.Floor(_time).ToString();
         _Time -= Time.deltaTime;
-
-        _Time = ((int)(_time * 100)) / 100f;
 
         if (_Time == 0)
         {
