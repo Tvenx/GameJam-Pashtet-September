@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class ItemPedestal : MonoBehaviour
@@ -6,6 +7,9 @@ public class ItemPedestal : MonoBehaviour
     [SerializeField] private int requiredItemIndex;
     private GameObject currentItem;
     private bool playerInRange;
+
+    public event Action OnCorrectItemPlaced;
+    public event Action OnItemRemoved;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -51,6 +55,7 @@ public class ItemPedestal : MonoBehaviour
             currentItem = Instantiate(item._itemPrefab, placementPoint.position, placementPoint.rotation);
             currentItem.transform.SetParent(placementPoint);
             Debug.Log("Item placed on pedestal: " + item._index);
+            OnCorrectItemPlaced?.Invoke();
         }
     }
 
@@ -59,15 +64,12 @@ public class ItemPedestal : MonoBehaviour
         InventoryManager inventory = FindObjectOfType<InventoryManager>();
         if (inventory != null)
         {
-            Debug.Log("InventoryManager найден");
             if (currentItem != null)
             {
-                Debug.Log("currentItem не равен null");
                 ItemObject itemObj = currentItem.GetComponent<ItemObject>();
 
                 if (itemObj != null)
                 {
-                    Debug.Log("ItemObject найден");
                     inventory.AddItem(itemObj.GetItem());
                     Debug.Log("Item returned to inventory: " + itemObj.GetItem()._index);
                 }
@@ -78,17 +80,13 @@ public class ItemPedestal : MonoBehaviour
 
                 Destroy(currentItem);
                 currentItem = null;
-            }
-            else
-            {
-                Debug.Log("currentItem равен null");
-            }
-        }
-        else
-        {
-            Debug.Log("InventoryManager не найден");
+                OnItemRemoved?.Invoke();
+            }  
         }
     }
 
-
+    public bool HasCorrectItem()
+    {
+        return currentItem != null && currentItem.GetComponent<ItemObject>().GetItem()._index == requiredItemIndex;
+    }
 }
